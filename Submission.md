@@ -1,13 +1,12 @@
-===============================
-# Cara Mempersiapkan Berkas
-===============================
+
+## Konfigurasi Berkas
 
 1. Persiapan postgresql:
 
 - Buat database PostgreSQL dengan nama 'fashion_db' atau sesuaikan
 - Pada file main.py, isi "PG_PASSWORD" dengan password anda. Contoh blok kode;
 
-```
+```python
 PG_PASSWORD = "<your_password>"
 PG_CONN = f"postgresql://postgres:{PG_PASSWORD}@localhost:5432/fashion_db"
 PG_TABLE = "products"
@@ -18,58 +17,33 @@ PG_TABLE = "products"
 
 Berkas api.json sudah ada pada folder submission, sehingga cukup dijalani saja.
 
-===============================
-# Instalasi requirements
-===============================
+## Instalasi requirements
 
 Jalankan perintah di bawah ini pada terminal:
 
-> pip install -r requirements.txt
+```python
+pip install -r requirements.txt
+```
 
-===============================
-# Cara Menjalankan ETL Pipeline
-===============================
+## Cara Menjalankan ETL Pipeline
 
 1. Menjalankan ETL pipeline:
 
-> python main.py
-
+```python
+python main.py
+```
 
 2. Menjalankan unit test satu per-satu:
 
-> python -m pytest tests/
-
+```python
+python -m pytest tests/
+```
 
 3. Menjalankan Test Coverage:
 
-> python -m pytest --cov=utils tests/
+```python
+python -m pytest --cov=utils tests/
+```
 
-
-===============================
-# Struktur Folder
-===============================
-
-ETL Pipeline
-├── .pytest_cache
-├── tests
-│   ├── __pycache__
-│   ├── test_extract.py
-│   ├── test_load.py
-│   └── test_transform.py
-├── utils
-│   ├── __pycache__
-│   ├── __init__.py
-│   ├── extract.py
-│   ├── load.py
-│   └── transform.py
-├── .coverage
-├── main.py
-├── products.csv
-├── requirements.txt
-├── sheet-api-key.json
-└── submission.txt
-
-===============================
-
-# URL Google Sheet:
+## Link Google Sheet:
 https://docs.google.com/spreadsheets/d/1jq8ltXsjPSibt2uVLrdGxgjqQ5dextWFQoXIFUYnbOw/edit?gid=0#gid=0
