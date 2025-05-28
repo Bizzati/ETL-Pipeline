@@ -1,0 +1,9 @@
+beautifulsoup4
+requests
+pandas
+pytest
+pytest-cov
+sqlalchemy
+google-auth
+gspread
+pytz
